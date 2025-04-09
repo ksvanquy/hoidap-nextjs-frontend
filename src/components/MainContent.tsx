@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function MainContent() {
   const [selectedClass, setSelectedClass] = useState("Tất cả");
@@ -110,10 +111,12 @@ export default function MainContent() {
       <div className="space-y-3">
         <div className="bg-white rounded-md shadow p-3 space-y-2">
           <div className="flex items-center gap-2">
-            <img
+            <Image
               src="/images/avatar.png"
               alt="avatar"
-              className="w-8 h-8 rounded-md border"
+              width={32}
+              height={32}
+              className="rounded-md border"
             />
             <div className="text-sm text-gray-700 font-medium flex items-center gap-1 flex-wrap">
               <span className="text-black font-semibold">Vật Lý</span> ·
@@ -131,15 +134,19 @@ export default function MainContent() {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex space-x-1">
-                <img
+                <Image
                   src="/images/userAnswer1.jpg"
                   alt="avatar nhỏ"
-                  className="w-6 h-6 rounded-full border"
+                  width={24}
+                  height={24}
+                  className="rounded-full border"
                 />
-                <img
+                <Image
                   src="/images/userAnswer2.jpg"
                   alt="avatar nhỏ"
-                  className="w-6 h-6 rounded-full border"
+                  width={24}
+                  height={24}
+                  className="rounded-full border"
                 />
               </div>
               <button className="text-sm px-4 py-1 border border-blue-300 text-blue-600 rounded hover:bg-blue-50 transition">
